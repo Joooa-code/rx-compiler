@@ -1,0 +1,3 @@
+/home/joooa/vscode_projects/rx-compiler/build/CMakeFiles/rx-compiler.dir
+/home/joooa/vscode_projects/rx-compiler/build/CMakeFiles/edit_cache.dir
+/home/joooa/vscode_projects/rx-compiler/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/joooa/vscode_projects/rx-compiler/build",
+  "command": "/usr/bin/c++  -I/home/joooa/vscode_projects/rx-compiler/generated/antlr -I/usr/local/include/antlr4-runtime -std=c++17 -o CMakeFiles/rx-compiler.dir/src/main.cpp.o -c /home/joooa/vscode_projects/rx-compiler/src/main.cpp",
+  "file": "/home/joooa/vscode_projects/rx-compiler/src/main.cpp",
+  "output": "CMakeFiles/rx-compiler.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/joooa/vscode_projects/rx-compiler/build",
+  "command": "/usr/bin/c++  -I/home/joooa/vscode_projects/rx-compiler/generated/antlr -I/usr/local/include/antlr4-runtime -std=c++17 -o CMakeFiles/rx-compiler.dir/generated/antlr/RxLexer.cpp.o -c /home/joooa/vscode_projects/rx-compiler/generated/antlr/RxLexer.cpp",
+  "file": "/home/joooa/vscode_projects/rx-compiler/generated/antlr/RxLexer.cpp",
+  "output": "CMakeFiles/rx-compiler.dir/generated/antlr/RxLexer.cpp.o"
+},
+{
+  "directory": "/home/joooa/vscode_projects/rx-compiler/build",
+  "command": "/usr/bin/c++  -I/home/joooa/vscode_projects/rx-compiler/generated/antlr -I/usr/local/include/antlr4-runtime -std=c++17 -o CMakeFiles/rx-compiler.dir/generated/antlr/RxParser.cpp.o -c /home/joooa/vscode_projects/rx-compiler/generated/antlr/RxParser.cpp",
+  "file": "/home/joooa/vscode_projects/rx-compiler/generated/antlr/RxParser.cpp",
+  "output": "CMakeFiles/rx-compiler.dir/generated/antlr/RxParser.cpp.o"
+},
+{
+  "directory": "/home/joooa/vscode_projects/rx-compiler/build",
+  "command": "/usr/bin/c++  -I/home/joooa/vscode_projects/rx-compiler/generated/antlr -I/usr/local/include/antlr4-runtime -std=c++17 -o CMakeFiles/rx-compiler.dir/generated/antlr/RxParserVisitor.cpp.o -c /home/joooa/vscode_projects/rx-compiler/generated/antlr/RxParserVisitor.cpp",
+  "file": "/home/joooa/vscode_projects/rx-compiler/generated/antlr/RxParserVisitor.cpp",
+  "output": "CMakeFiles/rx-compiler.dir/generated/antlr/RxParserVisitor.cpp.o"
+},
+{
+  "directory": "/home/joooa/vscode_projects/rx-compiler/build",
+  "command": "/usr/bin/c++  -I/home/joooa/vscode_projects/rx-compiler/generated/antlr -I/usr/local/include/antlr4-runtime -std=c++17 -o CMakeFiles/rx-compiler.dir/generated/antlr/RxParserBaseVisitor.cpp.o -c /home/joooa/vscode_projects/rx-compiler/generated/antlr/RxParserBaseVisitor.cpp",
+  "file": "/home/joooa/vscode_projects/rx-compiler/generated/antlr/RxParserBaseVisitor.cpp",
+  "output": "CMakeFiles/rx-compiler.dir/generated/antlr/RxParserBaseVisitor.cpp.o"
+}
+]
