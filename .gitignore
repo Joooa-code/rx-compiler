@@ -15,3 +15,5 @@ dev/
 *.local.*
 
 /plan.md
+
+/build/
