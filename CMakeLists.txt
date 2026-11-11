@@ -17,6 +17,16 @@ add_executable(rx-compiler
     src/ast.h
     src/ast.cpp
 
+    src/semantic/context.h
+    src/semantic/context.cpp
+    src/semantic/scope.h
+    src/semantic/scope.cpp
+    src/semantic/semantic_checker.h
+    src/semantic/semantic_checker.cpp
+    src/semantic/symbol.h
+    src/semantic/type.h
+    src/semantic/type.cpp
+
     ${ANTLR_GENERATED_DIR}/RxLexer.cpp
     ${ANTLR_GENERATED_DIR}/RxParser.cpp
     ${ANTLR_GENERATED_DIR}/RxParserVisitor.cpp

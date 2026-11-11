@@ -7,6 +7,36 @@
 },
 {
   "directory": "/home/joooa/vscode_projects/rx-compiler/build",
+  "command": "/usr/bin/c++  -I/home/joooa/vscode_projects/rx-compiler/generated/antlr -I/usr/local/include/antlr4-runtime -std=c++17 -o CMakeFiles/rx-compiler.dir/src/ast.cpp.o -c /home/joooa/vscode_projects/rx-compiler/src/ast.cpp",
+  "file": "/home/joooa/vscode_projects/rx-compiler/src/ast.cpp",
+  "output": "CMakeFiles/rx-compiler.dir/src/ast.cpp.o"
+},
+{
+  "directory": "/home/joooa/vscode_projects/rx-compiler/build",
+  "command": "/usr/bin/c++  -I/home/joooa/vscode_projects/rx-compiler/generated/antlr -I/usr/local/include/antlr4-runtime -std=c++17 -o CMakeFiles/rx-compiler.dir/src/semantic/context.cpp.o -c /home/joooa/vscode_projects/rx-compiler/src/semantic/context.cpp",
+  "file": "/home/joooa/vscode_projects/rx-compiler/src/semantic/context.cpp",
+  "output": "CMakeFiles/rx-compiler.dir/src/semantic/context.cpp.o"
+},
+{
+  "directory": "/home/joooa/vscode_projects/rx-compiler/build",
+  "command": "/usr/bin/c++  -I/home/joooa/vscode_projects/rx-compiler/generated/antlr -I/usr/local/include/antlr4-runtime -std=c++17 -o CMakeFiles/rx-compiler.dir/src/semantic/scope.cpp.o -c /home/joooa/vscode_projects/rx-compiler/src/semantic/scope.cpp",
+  "file": "/home/joooa/vscode_projects/rx-compiler/src/semantic/scope.cpp",
+  "output": "CMakeFiles/rx-compiler.dir/src/semantic/scope.cpp.o"
+},
+{
+  "directory": "/home/joooa/vscode_projects/rx-compiler/build",
+  "command": "/usr/bin/c++  -I/home/joooa/vscode_projects/rx-compiler/generated/antlr -I/usr/local/include/antlr4-runtime -std=c++17 -o CMakeFiles/rx-compiler.dir/src/semantic/semantic_checker.cpp.o -c /home/joooa/vscode_projects/rx-compiler/src/semantic/semantic_checker.cpp",
+  "file": "/home/joooa/vscode_projects/rx-compiler/src/semantic/semantic_checker.cpp",
+  "output": "CMakeFiles/rx-compiler.dir/src/semantic/semantic_checker.cpp.o"
+},
+{
+  "directory": "/home/joooa/vscode_projects/rx-compiler/build",
+  "command": "/usr/bin/c++  -I/home/joooa/vscode_projects/rx-compiler/generated/antlr -I/usr/local/include/antlr4-runtime -std=c++17 -o CMakeFiles/rx-compiler.dir/src/semantic/type.cpp.o -c /home/joooa/vscode_projects/rx-compiler/src/semantic/type.cpp",
+  "file": "/home/joooa/vscode_projects/rx-compiler/src/semantic/type.cpp",
+  "output": "CMakeFiles/rx-compiler.dir/src/semantic/type.cpp.o"
+},
+{
+  "directory": "/home/joooa/vscode_projects/rx-compiler/build",
   "command": "/usr/bin/c++  -I/home/joooa/vscode_projects/rx-compiler/generated/antlr -I/usr/local/include/antlr4-runtime -std=c++17 -o CMakeFiles/rx-compiler.dir/generated/antlr/RxLexer.cpp.o -c /home/joooa/vscode_projects/rx-compiler/generated/antlr/RxLexer.cpp",
   "file": "/home/joooa/vscode_projects/rx-compiler/generated/antlr/RxLexer.cpp",
   "output": "CMakeFiles/rx-compiler.dir/generated/antlr/RxLexer.cpp.o"

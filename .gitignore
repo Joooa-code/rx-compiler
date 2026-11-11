@@ -13,3 +13,5 @@ __pycache__/
 # Local files
 dev/
 *.local.*
+
+/plan.md

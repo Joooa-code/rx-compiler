@@ -86,10 +86,80 @@ CMakeFiles/rx-compiler.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rx-compiler.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joooa/vscode_projects/rx-compiler/src/main.cpp -o CMakeFiles/rx-compiler.dir/src/main.cpp.s
 
+CMakeFiles/rx-compiler.dir/src/ast.cpp.o: CMakeFiles/rx-compiler.dir/flags.make
+CMakeFiles/rx-compiler.dir/src/ast.cpp.o: /home/joooa/vscode_projects/rx-compiler/src/ast.cpp
+CMakeFiles/rx-compiler.dir/src/ast.cpp.o: CMakeFiles/rx-compiler.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joooa/vscode_projects/rx-compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/rx-compiler.dir/src/ast.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rx-compiler.dir/src/ast.cpp.o -MF CMakeFiles/rx-compiler.dir/src/ast.cpp.o.d -o CMakeFiles/rx-compiler.dir/src/ast.cpp.o -c /home/joooa/vscode_projects/rx-compiler/src/ast.cpp
+
+CMakeFiles/rx-compiler.dir/src/ast.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rx-compiler.dir/src/ast.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joooa/vscode_projects/rx-compiler/src/ast.cpp > CMakeFiles/rx-compiler.dir/src/ast.cpp.i
+
+CMakeFiles/rx-compiler.dir/src/ast.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rx-compiler.dir/src/ast.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joooa/vscode_projects/rx-compiler/src/ast.cpp -o CMakeFiles/rx-compiler.dir/src/ast.cpp.s
+
+CMakeFiles/rx-compiler.dir/src/semantic/context.cpp.o: CMakeFiles/rx-compiler.dir/flags.make
+CMakeFiles/rx-compiler.dir/src/semantic/context.cpp.o: /home/joooa/vscode_projects/rx-compiler/src/semantic/context.cpp
+CMakeFiles/rx-compiler.dir/src/semantic/context.cpp.o: CMakeFiles/rx-compiler.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joooa/vscode_projects/rx-compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/rx-compiler.dir/src/semantic/context.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rx-compiler.dir/src/semantic/context.cpp.o -MF CMakeFiles/rx-compiler.dir/src/semantic/context.cpp.o.d -o CMakeFiles/rx-compiler.dir/src/semantic/context.cpp.o -c /home/joooa/vscode_projects/rx-compiler/src/semantic/context.cpp
+
+CMakeFiles/rx-compiler.dir/src/semantic/context.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rx-compiler.dir/src/semantic/context.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joooa/vscode_projects/rx-compiler/src/semantic/context.cpp > CMakeFiles/rx-compiler.dir/src/semantic/context.cpp.i
+
+CMakeFiles/rx-compiler.dir/src/semantic/context.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rx-compiler.dir/src/semantic/context.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joooa/vscode_projects/rx-compiler/src/semantic/context.cpp -o CMakeFiles/rx-compiler.dir/src/semantic/context.cpp.s
+
+CMakeFiles/rx-compiler.dir/src/semantic/scope.cpp.o: CMakeFiles/rx-compiler.dir/flags.make
+CMakeFiles/rx-compiler.dir/src/semantic/scope.cpp.o: /home/joooa/vscode_projects/rx-compiler/src/semantic/scope.cpp
+CMakeFiles/rx-compiler.dir/src/semantic/scope.cpp.o: CMakeFiles/rx-compiler.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joooa/vscode_projects/rx-compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/rx-compiler.dir/src/semantic/scope.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rx-compiler.dir/src/semantic/scope.cpp.o -MF CMakeFiles/rx-compiler.dir/src/semantic/scope.cpp.o.d -o CMakeFiles/rx-compiler.dir/src/semantic/scope.cpp.o -c /home/joooa/vscode_projects/rx-compiler/src/semantic/scope.cpp
+
+CMakeFiles/rx-compiler.dir/src/semantic/scope.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rx-compiler.dir/src/semantic/scope.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joooa/vscode_projects/rx-compiler/src/semantic/scope.cpp > CMakeFiles/rx-compiler.dir/src/semantic/scope.cpp.i
+
+CMakeFiles/rx-compiler.dir/src/semantic/scope.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rx-compiler.dir/src/semantic/scope.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joooa/vscode_projects/rx-compiler/src/semantic/scope.cpp -o CMakeFiles/rx-compiler.dir/src/semantic/scope.cpp.s
+
+CMakeFiles/rx-compiler.dir/src/semantic/semantic_checker.cpp.o: CMakeFiles/rx-compiler.dir/flags.make
+CMakeFiles/rx-compiler.dir/src/semantic/semantic_checker.cpp.o: /home/joooa/vscode_projects/rx-compiler/src/semantic/semantic_checker.cpp
+CMakeFiles/rx-compiler.dir/src/semantic/semantic_checker.cpp.o: CMakeFiles/rx-compiler.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joooa/vscode_projects/rx-compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/rx-compiler.dir/src/semantic/semantic_checker.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rx-compiler.dir/src/semantic/semantic_checker.cpp.o -MF CMakeFiles/rx-compiler.dir/src/semantic/semantic_checker.cpp.o.d -o CMakeFiles/rx-compiler.dir/src/semantic/semantic_checker.cpp.o -c /home/joooa/vscode_projects/rx-compiler/src/semantic/semantic_checker.cpp
+
+CMakeFiles/rx-compiler.dir/src/semantic/semantic_checker.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rx-compiler.dir/src/semantic/semantic_checker.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joooa/vscode_projects/rx-compiler/src/semantic/semantic_checker.cpp > CMakeFiles/rx-compiler.dir/src/semantic/semantic_checker.cpp.i
+
+CMakeFiles/rx-compiler.dir/src/semantic/semantic_checker.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rx-compiler.dir/src/semantic/semantic_checker.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joooa/vscode_projects/rx-compiler/src/semantic/semantic_checker.cpp -o CMakeFiles/rx-compiler.dir/src/semantic/semantic_checker.cpp.s
+
+CMakeFiles/rx-compiler.dir/src/semantic/type.cpp.o: CMakeFiles/rx-compiler.dir/flags.make
+CMakeFiles/rx-compiler.dir/src/semantic/type.cpp.o: /home/joooa/vscode_projects/rx-compiler/src/semantic/type.cpp
+CMakeFiles/rx-compiler.dir/src/semantic/type.cpp.o: CMakeFiles/rx-compiler.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joooa/vscode_projects/rx-compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/rx-compiler.dir/src/semantic/type.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rx-compiler.dir/src/semantic/type.cpp.o -MF CMakeFiles/rx-compiler.dir/src/semantic/type.cpp.o.d -o CMakeFiles/rx-compiler.dir/src/semantic/type.cpp.o -c /home/joooa/vscode_projects/rx-compiler/src/semantic/type.cpp
+
+CMakeFiles/rx-compiler.dir/src/semantic/type.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rx-compiler.dir/src/semantic/type.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joooa/vscode_projects/rx-compiler/src/semantic/type.cpp > CMakeFiles/rx-compiler.dir/src/semantic/type.cpp.i
+
+CMakeFiles/rx-compiler.dir/src/semantic/type.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rx-compiler.dir/src/semantic/type.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joooa/vscode_projects/rx-compiler/src/semantic/type.cpp -o CMakeFiles/rx-compiler.dir/src/semantic/type.cpp.s
+
 CMakeFiles/rx-compiler.dir/generated/antlr/RxLexer.cpp.o: CMakeFiles/rx-compiler.dir/flags.make
 CMakeFiles/rx-compiler.dir/generated/antlr/RxLexer.cpp.o: /home/joooa/vscode_projects/rx-compiler/generated/antlr/RxLexer.cpp
 CMakeFiles/rx-compiler.dir/generated/antlr/RxLexer.cpp.o: CMakeFiles/rx-compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joooa/vscode_projects/rx-compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/rx-compiler.dir/generated/antlr/RxLexer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joooa/vscode_projects/rx-compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/rx-compiler.dir/generated/antlr/RxLexer.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rx-compiler.dir/generated/antlr/RxLexer.cpp.o -MF CMakeFiles/rx-compiler.dir/generated/antlr/RxLexer.cpp.o.d -o CMakeFiles/rx-compiler.dir/generated/antlr/RxLexer.cpp.o -c /home/joooa/vscode_projects/rx-compiler/generated/antlr/RxLexer.cpp
 
 CMakeFiles/rx-compiler.dir/generated/antlr/RxLexer.cpp.i: cmake_force
@@ -103,7 +173,7 @@ CMakeFiles/rx-compiler.dir/generated/antlr/RxLexer.cpp.s: cmake_force
 CMakeFiles/rx-compiler.dir/generated/antlr/RxParser.cpp.o: CMakeFiles/rx-compiler.dir/flags.make
 CMakeFiles/rx-compiler.dir/generated/antlr/RxParser.cpp.o: /home/joooa/vscode_projects/rx-compiler/generated/antlr/RxParser.cpp
 CMakeFiles/rx-compiler.dir/generated/antlr/RxParser.cpp.o: CMakeFiles/rx-compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joooa/vscode_projects/rx-compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/rx-compiler.dir/generated/antlr/RxParser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joooa/vscode_projects/rx-compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/rx-compiler.dir/generated/antlr/RxParser.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rx-compiler.dir/generated/antlr/RxParser.cpp.o -MF CMakeFiles/rx-compiler.dir/generated/antlr/RxParser.cpp.o.d -o CMakeFiles/rx-compiler.dir/generated/antlr/RxParser.cpp.o -c /home/joooa/vscode_projects/rx-compiler/generated/antlr/RxParser.cpp
 
 CMakeFiles/rx-compiler.dir/generated/antlr/RxParser.cpp.i: cmake_force
@@ -117,7 +187,7 @@ CMakeFiles/rx-compiler.dir/generated/antlr/RxParser.cpp.s: cmake_force
 CMakeFiles/rx-compiler.dir/generated/antlr/RxParserVisitor.cpp.o: CMakeFiles/rx-compiler.dir/flags.make
 CMakeFiles/rx-compiler.dir/generated/antlr/RxParserVisitor.cpp.o: /home/joooa/vscode_projects/rx-compiler/generated/antlr/RxParserVisitor.cpp
 CMakeFiles/rx-compiler.dir/generated/antlr/RxParserVisitor.cpp.o: CMakeFiles/rx-compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joooa/vscode_projects/rx-compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/rx-compiler.dir/generated/antlr/RxParserVisitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joooa/vscode_projects/rx-compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/rx-compiler.dir/generated/antlr/RxParserVisitor.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rx-compiler.dir/generated/antlr/RxParserVisitor.cpp.o -MF CMakeFiles/rx-compiler.dir/generated/antlr/RxParserVisitor.cpp.o.d -o CMakeFiles/rx-compiler.dir/generated/antlr/RxParserVisitor.cpp.o -c /home/joooa/vscode_projects/rx-compiler/generated/antlr/RxParserVisitor.cpp
 
 CMakeFiles/rx-compiler.dir/generated/antlr/RxParserVisitor.cpp.i: cmake_force
@@ -131,7 +201,7 @@ CMakeFiles/rx-compiler.dir/generated/antlr/RxParserVisitor.cpp.s: cmake_force
 CMakeFiles/rx-compiler.dir/generated/antlr/RxParserBaseVisitor.cpp.o: CMakeFiles/rx-compiler.dir/flags.make
 CMakeFiles/rx-compiler.dir/generated/antlr/RxParserBaseVisitor.cpp.o: /home/joooa/vscode_projects/rx-compiler/generated/antlr/RxParserBaseVisitor.cpp
 CMakeFiles/rx-compiler.dir/generated/antlr/RxParserBaseVisitor.cpp.o: CMakeFiles/rx-compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joooa/vscode_projects/rx-compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/rx-compiler.dir/generated/antlr/RxParserBaseVisitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joooa/vscode_projects/rx-compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/rx-compiler.dir/generated/antlr/RxParserBaseVisitor.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rx-compiler.dir/generated/antlr/RxParserBaseVisitor.cpp.o -MF CMakeFiles/rx-compiler.dir/generated/antlr/RxParserBaseVisitor.cpp.o.d -o CMakeFiles/rx-compiler.dir/generated/antlr/RxParserBaseVisitor.cpp.o -c /home/joooa/vscode_projects/rx-compiler/generated/antlr/RxParserBaseVisitor.cpp
 
 CMakeFiles/rx-compiler.dir/generated/antlr/RxParserBaseVisitor.cpp.i: cmake_force
@@ -145,6 +215,11 @@ CMakeFiles/rx-compiler.dir/generated/antlr/RxParserBaseVisitor.cpp.s: cmake_forc
 # Object files for target rx-compiler
 rx__compiler_OBJECTS = \
 "CMakeFiles/rx-compiler.dir/src/main.cpp.o" \
+"CMakeFiles/rx-compiler.dir/src/ast.cpp.o" \
+"CMakeFiles/rx-compiler.dir/src/semantic/context.cpp.o" \
+"CMakeFiles/rx-compiler.dir/src/semantic/scope.cpp.o" \
+"CMakeFiles/rx-compiler.dir/src/semantic/semantic_checker.cpp.o" \
+"CMakeFiles/rx-compiler.dir/src/semantic/type.cpp.o" \
 "CMakeFiles/rx-compiler.dir/generated/antlr/RxLexer.cpp.o" \
 "CMakeFiles/rx-compiler.dir/generated/antlr/RxParser.cpp.o" \
 "CMakeFiles/rx-compiler.dir/generated/antlr/RxParserVisitor.cpp.o" \
@@ -154,6 +229,11 @@ rx__compiler_OBJECTS = \
 rx__compiler_EXTERNAL_OBJECTS =
 
 rx-compiler: CMakeFiles/rx-compiler.dir/src/main.cpp.o
+rx-compiler: CMakeFiles/rx-compiler.dir/src/ast.cpp.o
+rx-compiler: CMakeFiles/rx-compiler.dir/src/semantic/context.cpp.o
+rx-compiler: CMakeFiles/rx-compiler.dir/src/semantic/scope.cpp.o
+rx-compiler: CMakeFiles/rx-compiler.dir/src/semantic/semantic_checker.cpp.o
+rx-compiler: CMakeFiles/rx-compiler.dir/src/semantic/type.cpp.o
 rx-compiler: CMakeFiles/rx-compiler.dir/generated/antlr/RxLexer.cpp.o
 rx-compiler: CMakeFiles/rx-compiler.dir/generated/antlr/RxParser.cpp.o
 rx-compiler: CMakeFiles/rx-compiler.dir/generated/antlr/RxParserVisitor.cpp.o
@@ -161,7 +241,7 @@ rx-compiler: CMakeFiles/rx-compiler.dir/generated/antlr/RxParserBaseVisitor.cpp.
 rx-compiler: CMakeFiles/rx-compiler.dir/build.make
 rx-compiler: CMakeFiles/rx-compiler.dir/compiler_depend.ts
 rx-compiler: CMakeFiles/rx-compiler.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/joooa/vscode_projects/rx-compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable rx-compiler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/joooa/vscode_projects/rx-compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable rx-compiler"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rx-compiler.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -225,6 +225,30 @@ generated/antlr/RxParserVisitor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rx-compiler.dir/build.make CMakeFiles/rx-compiler.dir/generated/antlr/RxParserVisitor.cpp.s
 .PHONY : generated/antlr/RxParserVisitor.cpp.s
 
+src/ast.o: src/ast.cpp.o
+.PHONY : src/ast.o
+
+# target to build an object file
+src/ast.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rx-compiler.dir/build.make CMakeFiles/rx-compiler.dir/src/ast.cpp.o
+.PHONY : src/ast.cpp.o
+
+src/ast.i: src/ast.cpp.i
+.PHONY : src/ast.i
+
+# target to preprocess a source file
+src/ast.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rx-compiler.dir/build.make CMakeFiles/rx-compiler.dir/src/ast.cpp.i
+.PHONY : src/ast.cpp.i
+
+src/ast.s: src/ast.cpp.s
+.PHONY : src/ast.s
+
+# target to generate assembly for a file
+src/ast.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rx-compiler.dir/build.make CMakeFiles/rx-compiler.dir/src/ast.cpp.s
+.PHONY : src/ast.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -249,6 +273,102 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rx-compiler.dir/build.make CMakeFiles/rx-compiler.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/semantic/context.o: src/semantic/context.cpp.o
+.PHONY : src/semantic/context.o
+
+# target to build an object file
+src/semantic/context.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rx-compiler.dir/build.make CMakeFiles/rx-compiler.dir/src/semantic/context.cpp.o
+.PHONY : src/semantic/context.cpp.o
+
+src/semantic/context.i: src/semantic/context.cpp.i
+.PHONY : src/semantic/context.i
+
+# target to preprocess a source file
+src/semantic/context.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rx-compiler.dir/build.make CMakeFiles/rx-compiler.dir/src/semantic/context.cpp.i
+.PHONY : src/semantic/context.cpp.i
+
+src/semantic/context.s: src/semantic/context.cpp.s
+.PHONY : src/semantic/context.s
+
+# target to generate assembly for a file
+src/semantic/context.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rx-compiler.dir/build.make CMakeFiles/rx-compiler.dir/src/semantic/context.cpp.s
+.PHONY : src/semantic/context.cpp.s
+
+src/semantic/scope.o: src/semantic/scope.cpp.o
+.PHONY : src/semantic/scope.o
+
+# target to build an object file
+src/semantic/scope.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rx-compiler.dir/build.make CMakeFiles/rx-compiler.dir/src/semantic/scope.cpp.o
+.PHONY : src/semantic/scope.cpp.o
+
+src/semantic/scope.i: src/semantic/scope.cpp.i
+.PHONY : src/semantic/scope.i
+
+# target to preprocess a source file
+src/semantic/scope.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rx-compiler.dir/build.make CMakeFiles/rx-compiler.dir/src/semantic/scope.cpp.i
+.PHONY : src/semantic/scope.cpp.i
+
+src/semantic/scope.s: src/semantic/scope.cpp.s
+.PHONY : src/semantic/scope.s
+
+# target to generate assembly for a file
+src/semantic/scope.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rx-compiler.dir/build.make CMakeFiles/rx-compiler.dir/src/semantic/scope.cpp.s
+.PHONY : src/semantic/scope.cpp.s
+
+src/semantic/semantic_checker.o: src/semantic/semantic_checker.cpp.o
+.PHONY : src/semantic/semantic_checker.o
+
+# target to build an object file
+src/semantic/semantic_checker.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rx-compiler.dir/build.make CMakeFiles/rx-compiler.dir/src/semantic/semantic_checker.cpp.o
+.PHONY : src/semantic/semantic_checker.cpp.o
+
+src/semantic/semantic_checker.i: src/semantic/semantic_checker.cpp.i
+.PHONY : src/semantic/semantic_checker.i
+
+# target to preprocess a source file
+src/semantic/semantic_checker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rx-compiler.dir/build.make CMakeFiles/rx-compiler.dir/src/semantic/semantic_checker.cpp.i
+.PHONY : src/semantic/semantic_checker.cpp.i
+
+src/semantic/semantic_checker.s: src/semantic/semantic_checker.cpp.s
+.PHONY : src/semantic/semantic_checker.s
+
+# target to generate assembly for a file
+src/semantic/semantic_checker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rx-compiler.dir/build.make CMakeFiles/rx-compiler.dir/src/semantic/semantic_checker.cpp.s
+.PHONY : src/semantic/semantic_checker.cpp.s
+
+src/semantic/type.o: src/semantic/type.cpp.o
+.PHONY : src/semantic/type.o
+
+# target to build an object file
+src/semantic/type.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rx-compiler.dir/build.make CMakeFiles/rx-compiler.dir/src/semantic/type.cpp.o
+.PHONY : src/semantic/type.cpp.o
+
+src/semantic/type.i: src/semantic/type.cpp.i
+.PHONY : src/semantic/type.i
+
+# target to preprocess a source file
+src/semantic/type.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rx-compiler.dir/build.make CMakeFiles/rx-compiler.dir/src/semantic/type.cpp.i
+.PHONY : src/semantic/type.cpp.i
+
+src/semantic/type.s: src/semantic/type.cpp.s
+.PHONY : src/semantic/type.s
+
+# target to generate assembly for a file
+src/semantic/type.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rx-compiler.dir/build.make CMakeFiles/rx-compiler.dir/src/semantic/type.cpp.s
+.PHONY : src/semantic/type.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -270,9 +390,24 @@ help:
 	@echo "... generated/antlr/RxParserVisitor.o"
 	@echo "... generated/antlr/RxParserVisitor.i"
 	@echo "... generated/antlr/RxParserVisitor.s"
+	@echo "... src/ast.o"
+	@echo "... src/ast.i"
+	@echo "... src/ast.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/semantic/context.o"
+	@echo "... src/semantic/context.i"
+	@echo "... src/semantic/context.s"
+	@echo "... src/semantic/scope.o"
+	@echo "... src/semantic/scope.i"
+	@echo "... src/semantic/scope.s"
+	@echo "... src/semantic/semantic_checker.o"
+	@echo "... src/semantic/semantic_checker.i"
+	@echo "... src/semantic/semantic_checker.s"
+	@echo "... src/semantic/type.o"
+	@echo "... src/semantic/type.i"
+	@echo "... src/semantic/type.s"
 .PHONY : help
 
 

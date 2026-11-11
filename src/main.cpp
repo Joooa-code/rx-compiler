@@ -1,3 +1,4 @@
+#include <cstdlib>
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -5,6 +6,7 @@
 #include "RxLexer.h"
 #include "RxParser.h"
 #include "ast.h"
+#include "semantic/semantic_checker.h"
 
 int main(int argc, char *argv[]) {
     // 1. 检查命令行参数
@@ -50,12 +52,24 @@ int main(int argc, char *argv[]) {
         // 9. Parse Tree -> AST
         rx::ast::CrateNode ast(tree);
 
-        // 10. 输出 AST
-        ast.dump(std::cout, 0);
+        // 10. Optional AST dump for debugging; disabled during test runs.
+        if (std::getenv("RX_DUMP_AST") != nullptr) {
+            ast.dump(std::cout, 0);
+        }
+
+        // 11. Semantic analysis
+        rx::semantic::SemanticChecker checker;
+        if (!checker.check(ast)) {
+            for (const auto &error : checker.errors()) {
+                std::cerr << "Semantic error: " << error << '\n';
+            }
+            return 1;
+        }
 
     } catch (const std::exception &e) {
-        std::cerr << "Error: " << e.what() << '\n';
-        return 1;
+        // Internal failures must not look like a normal semantic rejection.
+        std::cerr << "Internal error: " << e.what() << '\n';
+        return 2;
     }
 
     return 0;

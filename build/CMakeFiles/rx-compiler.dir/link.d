@@ -3,6 +3,11 @@ rx-compiler: \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o \
   /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o \
   CMakeFiles/rx-compiler.dir/src/main.cpp.o \
+  CMakeFiles/rx-compiler.dir/src/ast.cpp.o \
+  CMakeFiles/rx-compiler.dir/src/semantic/context.cpp.o \
+  CMakeFiles/rx-compiler.dir/src/semantic/scope.cpp.o \
+  CMakeFiles/rx-compiler.dir/src/semantic/semantic_checker.cpp.o \
+  CMakeFiles/rx-compiler.dir/src/semantic/type.cpp.o \
   CMakeFiles/rx-compiler.dir/generated/antlr/RxLexer.cpp.o \
   CMakeFiles/rx-compiler.dir/generated/antlr/RxParser.cpp.o \
   CMakeFiles/rx-compiler.dir/generated/antlr/RxParserVisitor.cpp.o \
@@ -44,6 +49,16 @@ rx-compiler: \
 /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o:
 
 CMakeFiles/rx-compiler.dir/src/main.cpp.o:
+
+CMakeFiles/rx-compiler.dir/src/ast.cpp.o:
+
+CMakeFiles/rx-compiler.dir/src/semantic/context.cpp.o:
+
+CMakeFiles/rx-compiler.dir/src/semantic/scope.cpp.o:
+
+CMakeFiles/rx-compiler.dir/src/semantic/semantic_checker.cpp.o:
+
+CMakeFiles/rx-compiler.dir/src/semantic/type.cpp.o:
 
 CMakeFiles/rx-compiler.dir/generated/antlr/RxLexer.cpp.o:
 

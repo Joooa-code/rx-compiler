@@ -1149,7 +1149,7 @@ CrateNode::CrateNode(rx::RxParser::CrateContext *ctx)
 }
 
 UseItemNode::UseItemNode(rx::RxParser::UseDeclarationContext *ctx)
-    : ASTNode(ASTNodeType::UseItem) {
+    : ItemNode(ASTNodeType::UseItem) {
   if (ctx == nullptr) {
     fail("UseItemNode received null");
   }
@@ -1158,7 +1158,7 @@ UseItemNode::UseItemNode(rx::RxParser::UseDeclarationContext *ctx)
 }
 
 FnItemNode::FnItemNode(rx::RxParser::FunctionDefinitionContext *ctx)
-    : ASTNode(ASTNodeType::FnItem) {
+    : ItemNode(ASTNodeType::FnItem) {
   if (ctx == nullptr) {
     fail("FnItemNode received null");
   }
@@ -1214,7 +1214,7 @@ FnItemNode::FnItemNode(rx::RxParser::FunctionDefinitionContext *ctx)
 }
 
 StructItemNode::StructItemNode(rx::RxParser::StructDefinitionContext *ctx)
-    : ASTNode(ASTNodeType::StructItem) {
+    : ItemNode(ASTNodeType::StructItem) {
   if (ctx == nullptr) {
     fail("StructItemNode received null");
   }
@@ -1244,7 +1244,7 @@ StructItemNode::StructItemNode(rx::RxParser::StructDefinitionContext *ctx)
 }
 
 ConstItemNode::ConstItemNode(rx::RxParser::ConstantItemContext *ctx)
-    : ASTNode(ASTNodeType::ConstItem) {
+    : ItemNode(ASTNodeType::ConstItem) {
   if (ctx == nullptr) {
     fail("ConstItemNode received null");
   }
@@ -1255,7 +1255,7 @@ ConstItemNode::ConstItemNode(rx::RxParser::ConstantItemContext *ctx)
 }
 
 ImplItemNode::ImplItemNode(rx::RxParser::InherentImplContext *ctx)
-    : ASTNode(ASTNodeType::ImplItem) {
+    : ItemNode(ASTNodeType::ImplItem) {
   if (ctx == nullptr) {
     fail("ImplItemNode received null");
   }
@@ -1277,7 +1277,7 @@ ImplItemNode::ImplItemNode(rx::RxParser::InherentImplContext *ctx)
 
 // Statement constructors
 LetStmtNode::LetStmtNode(rx::RxParser::LetStatementContext *ctx)
-    : ASTNode(ASTNodeType::LetStmt) {
+    : StmtNode(ASTNodeType::LetStmt) {
   if (ctx == nullptr) {
     fail("LetStmtNode received null");
   }
@@ -1294,7 +1294,7 @@ LetStmtNode::LetStmtNode(rx::RxParser::LetStatementContext *ctx)
 }
 
 ExprStmtNode::ExprStmtNode(antlr4::ParserRuleContext *ctx)
-    : ASTNode(ASTNodeType::ExprStmt) {
+    : StmtNode(ASTNodeType::ExprStmt) {
   if (ctx == nullptr) {
     fail("ExprStmtNode received null");
   }
@@ -1322,16 +1322,16 @@ ExprStmtNode::ExprStmtNode(antlr4::ParserRuleContext *ctx)
 }
 
 // Basic expression constructors
-UnitLitExprNode::UnitLitExprNode() : ASTNode(ASTNodeType::UnitLitExpr) {}
+UnitLitExprNode::UnitLitExprNode() : ExprNode(ASTNodeType::UnitLitExpr) {}
 
 IntLitExprNode::IntLitExprNode(std::string rawValue_)
-    : ASTNode(ASTNodeType::IntLitExpr), rawValue(std::move(rawValue_)) {}
+    : ExprNode(ASTNodeType::IntLitExpr), rawValue(std::move(rawValue_)) {}
 
 BoolLitExprNode::BoolLitExprNode(bool value_)
-    : ASTNode(ASTNodeType::BoolLitExpr), value(value_) {}
+    : ExprNode(ASTNodeType::BoolLitExpr), value(value_) {}
 
 PathExprNode::PathExprNode(rx::RxParser::PathInExpressionContext *ctx)
-    : ASTNode(ASTNodeType::PathExpr) {
+    : ExprNode(ASTNodeType::PathExpr) {
   if (ctx == nullptr) {
     fail("PathExprNode received null");
   }
@@ -1342,10 +1342,10 @@ PathExprNode::PathExprNode(rx::RxParser::PathInExpressionContext *ctx)
 }
 
 // Aggregate expressions
-StructExprNode::StructExprNode() : ASTNode(ASTNodeType::StructExpr) {}
+StructExprNode::StructExprNode() : ExprNode(ASTNodeType::StructExpr) {}
 
 ArrayExprNode::ArrayExprNode(rx::RxParser::ArrayExpressionContext *ctx)
-    : ASTNode(ASTNodeType::ArrayExpr) {
+    : ExprNode(ASTNodeType::ArrayExpr) {
   if (ctx == nullptr) {
     fail("ArrayExprNode received null");
   }
@@ -1359,13 +1359,13 @@ ArrayExprNode::ArrayExprNode(rx::RxParser::ArrayExpressionContext *ctx)
   }
 }
 
-ArrayRepeatNode::ArrayRepeatNode() : ASTNode(ASTNodeType::ArrayRepeat) {}
+ArrayRepeatNode::ArrayRepeatNode() : ExprNode(ASTNodeType::ArrayRepeat) {}
 
 // Unary / binary / assignment / cast
-UnaryExprNode::UnaryExprNode() : ASTNode(ASTNodeType::UnaryExpr) {}
+UnaryExprNode::UnaryExprNode() : ExprNode(ASTNodeType::UnaryExpr) {}
 
 UnaryExprNode::UnaryExprNode(antlr4::ParserRuleContext *ctx)
-    : ASTNode(ASTNodeType::UnaryExpr) {
+    : ExprNode(ASTNodeType::UnaryExpr) {
   if (ctx == nullptr) {
     fail("UnaryExprNode received null");
   }
@@ -1399,7 +1399,7 @@ UnaryExprNode::UnaryExprNode(antlr4::ParserRuleContext *ctx)
 }
 
 BinaryExprNode::BinaryExprNode(antlr4::ParserRuleContext *ctx)
-    : ASTNode(ASTNodeType::BinaryExpr) {
+    : ExprNode(ASTNodeType::BinaryExpr) {
   if (ctx == nullptr) {
     fail("BinaryExprNode received null");
   }
@@ -1423,7 +1423,7 @@ BinaryExprNode::BinaryExprNode(antlr4::ParserRuleContext *ctx)
 }
 
 AssignExprNode::AssignExprNode(antlr4::ParserRuleContext *ctx)
-    : ASTNode(ASTNodeType::AssignExpr) {
+    : ExprNode(ASTNodeType::AssignExpr) {
   if (ctx == nullptr) {
     fail("AssignExprNode received null");
   }
@@ -1447,7 +1447,7 @@ AssignExprNode::AssignExprNode(antlr4::ParserRuleContext *ctx)
 }
 
 CastExprNode::CastExprNode(antlr4::ParserRuleContext *ctx)
-    : ASTNode(ASTNodeType::CastExpr) {
+    : ExprNode(ASTNodeType::CastExpr) {
   if (ctx == nullptr) {
     fail("CastExprNode received null");
   }
@@ -1496,18 +1496,18 @@ CastExprNode::CastExprNode(antlr4::ParserRuleContext *ctx)
 }
 
 // Postfix expression constructors
-CallExprNode::CallExprNode() : ASTNode(ASTNodeType::CallExpr) {}
+CallExprNode::CallExprNode() : ExprNode(ASTNodeType::CallExpr) {}
 
 MethodCallExprNode::MethodCallExprNode()
-    : ASTNode(ASTNodeType::MethodCallExpr) {}
+    : ExprNode(ASTNodeType::MethodCallExpr) {}
 
-FieldExprNode::FieldExprNode() : ASTNode(ASTNodeType::FieldExpr) {}
+FieldExprNode::FieldExprNode() : ExprNode(ASTNodeType::FieldExpr) {}
 
-IndexExprNode::IndexExprNode() : ASTNode(ASTNodeType::IndexExpr) {}
+IndexExprNode::IndexExprNode() : ExprNode(ASTNodeType::IndexExpr) {}
 
 // Block / control-flow constructors
 BlockExprNode::BlockExprNode(rx::RxParser::BlockExpressionContext *ctx)
-    : ASTNode(ASTNodeType::BlockExpr) {
+    : ExprNode(ASTNodeType::BlockExpr) {
   if (ctx == nullptr) {
     fail("BlockExprNode received null");
   }
@@ -1527,7 +1527,7 @@ BlockExprNode::BlockExprNode(rx::RxParser::BlockExpressionContext *ctx)
 }
 
 IfExprNode::IfExprNode(rx::RxParser::IfExpressionContext *ctx)
-    : ASTNode(ASTNodeType::IfExpr) {
+    : ExprNode(ASTNodeType::IfExpr) {
   if (ctx == nullptr) {
     fail("IfExprNode received null");
   }
@@ -1549,7 +1549,7 @@ IfExprNode::IfExprNode(rx::RxParser::IfExpressionContext *ctx)
 }
 
 LoopExprNode::LoopExprNode(rx::RxParser::BlockExpressionContext *ctx)
-    : ASTNode(ASTNodeType::LoopExpr) {
+    : ExprNode(ASTNodeType::LoopExpr) {
   if (ctx == nullptr) {
     fail("LoopExprNode received null");
   }
@@ -1560,7 +1560,7 @@ LoopExprNode::LoopExprNode(rx::RxParser::BlockExpressionContext *ctx)
 WhileExprNode::WhileExprNode(
     rx::RxParser::ConditionExpressionContext *conditionCtx,
     rx::RxParser::BlockExpressionContext *bodyCtx)
-    : ASTNode(ASTNodeType::WhileExpr) {
+    : ExprNode(ASTNodeType::WhileExpr) {
   if (conditionCtx == nullptr || bodyCtx == nullptr) {
     fail("WhileExprNode received null context");
   }
@@ -1569,17 +1569,17 @@ WhileExprNode::WhileExprNode(
   body = std::make_unique<BlockExprNode>(bodyCtx);
 }
 
-BreakExprNode::BreakExprNode() : ASTNode(ASTNodeType::BreakExpr) {}
+BreakExprNode::BreakExprNode() : ExprNode(ASTNodeType::BreakExpr) {}
 
-ContinueExprNode::ContinueExprNode() : ASTNode(ASTNodeType::ContinueExpr) {}
+ContinueExprNode::ContinueExprNode() : ExprNode(ASTNodeType::ContinueExpr) {}
 
-ReturnExprNode::ReturnExprNode() : ASTNode(ASTNodeType::ReturnExpr) {}
+ReturnExprNode::ReturnExprNode() : ExprNode(ASTNodeType::ReturnExpr) {}
 
 // Type constructors
-UnitTypeNode::UnitTypeNode() : ASTNode(ASTNodeType::UnitType) {}
+UnitTypeNode::UnitTypeNode() : TypeNode(ASTNodeType::UnitType) {}
 
 PathTypeNode::PathTypeNode(rx::RxParser::TypePathContext *ctx)
-    : ASTNode(ASTNodeType::PathType) {
+    : TypeNode(ASTNodeType::PathType) {
   if (ctx == nullptr) {
     fail("PathTypeNode received null");
   }
@@ -1589,10 +1589,10 @@ PathTypeNode::PathTypeNode(rx::RxParser::TypePathContext *ctx)
   }
 }
 
-PathTypeNode::PathTypeNode() : ASTNode(ASTNodeType::PathType) {}
+PathTypeNode::PathTypeNode() : TypeNode(ASTNodeType::PathType) {}
 
 ReferenceTypeNode::ReferenceTypeNode(rx::RxParser::ReferenceTypeContext *ctx)
-    : ASTNode(ASTNodeType::ReferenceType) {
+    : TypeNode(ASTNodeType::ReferenceType) {
   if (ctx == nullptr) {
     fail("RefTypeNode received null");
   }
@@ -1624,10 +1624,10 @@ ReferenceTypeNode::ReferenceTypeNode(rx::RxParser::ReferenceTypeContext *ctx)
   isMutable = mutableRef;
 }
 
-ReferenceTypeNode::ReferenceTypeNode() : ASTNode(ASTNodeType::ReferenceType) {}
+ReferenceTypeNode::ReferenceTypeNode() : TypeNode(ASTNodeType::ReferenceType) {}
 
 ArrayTypeNode::ArrayTypeNode(rx::RxParser::ArrayTypeContext *ctx)
-    : ASTNode(ASTNodeType::ArrayType) {
+    : TypeNode(ASTNodeType::ArrayType) {
   if (ctx == nullptr) {
     fail("ArrayTypeNode received null");
   }

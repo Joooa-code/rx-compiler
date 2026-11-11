@@ -103,7 +103,7 @@ enum class WherePredicateKind {
   Type,
 };
 
-struct WherePredicate {  
+struct WherePredicate {
   WherePredicateKind kind = WherePredicateKind::Lifetime;
   std::optional<Lifetime> lifetime;
   NodePtr type;
@@ -163,6 +163,26 @@ public:
   void dump(std::ostream &out, std::size_t indent = 0) const;
 };
 
+class ItemNode : public ASTNode {
+protected:
+  explicit ItemNode(ASTNodeType kind_) : ASTNode(kind_) {}
+};
+
+class StmtNode : public ASTNode {
+protected:
+  explicit StmtNode(ASTNodeType kind_) : ASTNode(kind_) {}
+};
+
+class ExprNode : public ASTNode {
+protected:
+  explicit ExprNode(ASTNodeType kind_) : ASTNode(kind_) {}
+};
+
+class TypeNode : public ASTNode {
+protected:
+  explicit TypeNode(ASTNodeType kind_) : ASTNode(kind_) {}
+};
+
 // Root
 class CrateNode final : public ASTNode {
 public:
@@ -171,7 +191,7 @@ public:
 };
 
 // Items
-class UseItemNode final : public ASTNode {
+class UseItemNode final : public ItemNode {
 public:
   std::string text;
   explicit UseItemNode(rx::RxParser::UseDeclarationContext *ctx);
@@ -191,7 +211,7 @@ struct FunctionParam {
   NodePtr type;
 };
 
-class FnItemNode final : public ASTNode {
+class FnItemNode final : public ItemNode {
 public:
   std::string name;
   GenericParams genericParams;
@@ -202,7 +222,7 @@ public:
   explicit FnItemNode(rx::RxParser::FunctionDefinitionContext *ctx);
 };
 
-class StructItemNode final : public ASTNode {
+class StructItemNode final : public ItemNode {
 public:
   std::string name;
   GenericParams genericParams;
@@ -212,7 +232,7 @@ public:
   explicit StructItemNode(rx::RxParser::StructDefinitionContext *ctx);
 };
 
-class ConstItemNode final : public ASTNode {
+class ConstItemNode final : public ItemNode {
 public:
   std::string name;
   NodePtr type;
@@ -220,7 +240,7 @@ public:
   explicit ConstItemNode(rx::RxParser::ConstantItemContext *ctx);
 };
 
-class ImplItemNode final : public ASTNode {
+class ImplItemNode final : public ItemNode {
 public:
   GenericParams genericParams;
   WhereClause whereClause;
@@ -230,7 +250,7 @@ public:
 };
 
 // 单独的 `;` 没有语义效果。BlockExprNode 构造时直接跳过，不单独创建 EmptyStmt。
-class LetStmtNode final : public ASTNode {
+class LetStmtNode final : public StmtNode {
 public:
   std::string name;
   bool isMutable = false;
@@ -239,7 +259,7 @@ public:
   explicit LetStmtNode(rx::RxParser::LetStatementContext *ctx);
 };
 
-class ExprStmtNode final : public ASTNode {
+class ExprStmtNode final : public StmtNode {
 public:
   NodePtr expr;
   bool hasSemicolon = false;
@@ -247,24 +267,24 @@ public:
 };
 
 // Basic expressions
-class UnitLitExprNode final : public ASTNode {
+class UnitLitExprNode final : public ExprNode {
 public:
   UnitLitExprNode();
 };
 
-class IntLitExprNode final : public ASTNode {
+class IntLitExprNode final : public ExprNode {
 public:
   std::string rawValue;
   explicit IntLitExprNode(std::string rawValue_);
 };
 
-class BoolLitExprNode final : public ASTNode {
+class BoolLitExprNode final : public ExprNode {
 public:
   bool value = false;
   explicit BoolLitExprNode(bool value_);
 };
 
-class PathExprNode final : public ASTNode {
+class PathExprNode final : public ExprNode {
 public:
   std::vector<PathSegment> segments;
   explicit PathExprNode(rx::RxParser::PathInExpressionContext *ctx);
@@ -282,20 +302,20 @@ struct StructExprField {
   StructExprField &operator=(const StructExprField &) = delete;
 };
 
-class StructExprNode final : public ASTNode {
+class StructExprNode final : public ExprNode {
 public:
   NodePtr structName;
   std::vector<StructExprField> fields;
   StructExprNode();
 };
 
-class ArrayExprNode final : public ASTNode {
+class ArrayExprNode final : public ExprNode {
 public:
   NodeList elements;
   explicit ArrayExprNode(rx::RxParser::ArrayExpressionContext *ctx);
 };
 
-class ArrayRepeatNode final : public ASTNode {
+class ArrayRepeatNode final : public ExprNode {
 public:
   NodePtr element;
   NodePtr count;
@@ -303,7 +323,7 @@ public:
 };
 
 // Unary / Binary / Assignment / Cast
-class UnaryExprNode final : public ASTNode {
+class UnaryExprNode final : public ExprNode {
 public:
   std::string op;
   NodePtr expr;
@@ -312,14 +332,14 @@ public:
 };
 
 // 一个binary node
-class BinaryExprNode final : public ASTNode {
+class BinaryExprNode final : public ExprNode {
 public:
   NodeList operands;
   std::vector<std::string> operators;
   explicit BinaryExprNode(antlr4::ParserRuleContext *ctx);
 };
 
-class AssignExprNode final : public ASTNode {
+class AssignExprNode final : public ExprNode {
 public:
   NodePtr left;
   NodePtr right;
@@ -327,7 +347,7 @@ public:
   explicit AssignExprNode(antlr4::ParserRuleContext *ctx);
 };
 
-class CastExprNode final : public ASTNode {
+class CastExprNode final : public ExprNode {
 public:
   NodePtr expr;
   NodeList types;
@@ -335,14 +355,14 @@ public:
 };
 
 // Postfix expressions
-class CallExprNode final : public ASTNode {
+class CallExprNode final : public ExprNode {
 public:
   NodePtr function;
   NodeList args;
   CallExprNode();
 };
 
-class MethodCallExprNode final : public ASTNode {
+class MethodCallExprNode final : public ExprNode {
 public:
   NodePtr receiver;
   PathSegment method;
@@ -350,14 +370,14 @@ public:
   MethodCallExprNode();
 };
 
-class FieldExprNode final : public ASTNode {
+class FieldExprNode final : public ExprNode {
 public:
   NodePtr receiver;
   std::string name;
   FieldExprNode();
 };
 
-class IndexExprNode final : public ASTNode {
+class IndexExprNode final : public ExprNode {
 public:
   NodePtr base;
   NodePtr index;
@@ -365,14 +385,14 @@ public:
 };
 
 // Block / control-flow expressions
-class BlockExprNode final : public ASTNode {
+class BlockExprNode final : public ExprNode {
 public:
   NodeList statements;
   NodePtr tailExpr;
   explicit BlockExprNode(rx::RxParser::BlockExpressionContext *ctx);
 };
 
-class IfExprNode final : public ASTNode {
+class IfExprNode final : public ExprNode {
 public:
   NodePtr condition;
   NodePtr ifBlock;
@@ -380,13 +400,13 @@ public:
   explicit IfExprNode(rx::RxParser::IfExpressionContext *ctx);
 };
 
-class LoopExprNode final : public ASTNode {
+class LoopExprNode final : public ExprNode {
 public:
   NodePtr body;
   explicit LoopExprNode(rx::RxParser::BlockExpressionContext *ctx);
 };
 
-class WhileExprNode final : public ASTNode {
+class WhileExprNode final : public ExprNode {
 public:
   NodePtr condition;
   NodePtr body;
@@ -394,37 +414,37 @@ public:
                 rx::RxParser::BlockExpressionContext *bodyCtx);
 };
 
-class BreakExprNode final : public ASTNode {
+class BreakExprNode final : public ExprNode {
 public:
   NodePtr expr;
   BreakExprNode();
 };
 
-class ContinueExprNode final : public ASTNode {
+class ContinueExprNode final : public ExprNode {
 public:
   ContinueExprNode();
 };
 
-class ReturnExprNode final : public ASTNode {
+class ReturnExprNode final : public ExprNode {
 public:
   NodePtr expr;
   ReturnExprNode();
 };
 
 // Types
-class UnitTypeNode final : public ASTNode {
+class UnitTypeNode final : public TypeNode {
 public:
   UnitTypeNode();
 };
 
-class PathTypeNode final : public ASTNode {
+class PathTypeNode final : public TypeNode {
 public:
   std::vector<PathSegment> segments;
   explicit PathTypeNode(rx::RxParser::TypePathContext *ctx);
   PathTypeNode();
 };
 
-class ReferenceTypeNode final : public ASTNode {
+class ReferenceTypeNode final : public TypeNode {
 public:
   NodePtr type;
   std::optional<Lifetime> lifetime;
@@ -433,7 +453,7 @@ public:
   ReferenceTypeNode();
 };
 
-class ArrayTypeNode final : public ASTNode {
+class ArrayTypeNode final : public TypeNode {
 public:
   NodePtr type;
   NodePtr length;
